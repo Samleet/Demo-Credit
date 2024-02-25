@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= 'Notifications' %></title>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="shortcut icon" href="/images/logo.png" origin="no-cors" defer/>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <%- include('partials/notif.html') %>
+
+            <div class="topbar">
+                <h2>
+                    <a href="/user/dashboard">
+                        &leftarrow;</a> Notifications (<%= notifications.length %>)
+                    <span>
+                        <a href="/user/transactions" title="Transactions">
+                            <img src="/images/icons/bill.png" alt=""/>
+                        </a>
+                        <a href="/user/wallet/fund" title="Fund Account">
+                            <img src="/images/icons/money.png" alt=""/>
+                        </a>
+                        <a href="/user/notifications" title="Notifications">
+                            <img src="/images/icons/internet.png" alt=""/>
+                        </a>
+                        <a href="/user/logout" class="link">Sign Out &rightarrow;</a>
+                    </span>
+                </h2>
+            </div>
+
+            <div class="logs">
+                <% if(notifications.length == 0){ %>
+                    <div class="empty">
+                        <img src="/images/rockster.png"/>
+                        <span>You don't have any notifications at the moment.</span>
+                    </div>
+                <% 
+                   } else {
+                    for(var i in notifications){
+                        notification = notifications[i];
+                %>
+
+                    <div class="tile">
+                        <%= notification['message'] %>
+                        <span id="date">
+                            <%= notification[
+                            'created_at'].toString().split('GMT')[0].substr(0,21) %>
+                        </span>
+                    </div>
+
+                <% 
+                    }
+                   }
+                %>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
