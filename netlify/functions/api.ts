@@ -6,5 +6,4 @@ import session from "express-session";
 import app from "../../app"
 
 
-app.use(routes);
 export const handler = serverless(app);
