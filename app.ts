@@ -33,11 +33,11 @@ app.use(routes);
 
 
 // Set EJS as the view engine
+app.set('view engine', 'html');
 app.set('views', 'src/views');
 
 // Activate EJS on .HTML files
 app.engine('html', ejs.renderFile);
-app.set('view engine', 'html');
 
 
 app.listen(port, () => {
@@ -45,3 +45,5 @@ app.listen(port, () => {
   console.log(`Server is running at ${host}:${port}`);
   
 });
+
+export default app;
