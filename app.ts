@@ -4,18 +4,12 @@ import dotenv from "dotenv";
 import database from "./src/configs/database/knex/index";
 import ejs from 'ejs';
 import routes from './src/routes/index';
-import path from 'path';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
-const root = __dirname;
 const env = (dotenv.config( ));
 const app: Express = express();
 const host = process.env.APP_URL;
 const port = process.env.PORT;
-
 
 
 // Use neccessary utilities
@@ -40,7 +34,7 @@ app.use(routes);
 
 // Set EJS as the view engine
 app.set('view engine', 'html');
-app.set('views', root+'/src/views');
+app.set('views', '/src/views');
 
 // Activate EJS on .HTML files
 app.engine('html',  ejs.renderFile);
