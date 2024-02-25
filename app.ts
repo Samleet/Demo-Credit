@@ -34,7 +34,7 @@ app.use(routes);
 
 // Set EJS as the view engine
 app.set('view engine', 'html');
-app.set('views', '../../src/views');
+app.set('views', 'src/views');
 
 // Activate EJS on .HTML files
 app.engine('html',  ejs.renderFile);
