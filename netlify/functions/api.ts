@@ -5,6 +5,6 @@ import routes from '../../src/routes/index';
 
 const api = express();
 
-api.use('/.netlify/functions/api', routes);
+api.use(routes);
 
 export const handler = serverless(api);
