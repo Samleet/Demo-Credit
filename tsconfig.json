@@ -1,0 +1,40 @@
+{
+    "ts-node": {
+        "esm": true,
+        "experimentalSpecifierResolution": "node"
+    },
+    "exclude": ["node_modules"],
+    "include": [
+      "./*"
+    ],
+    "compilerOptions": {
+      "target": "es6",
+
+      //comment line when running Knex CLI
+      //using "CommonJS" as [package.type]
+      "module": "ESNext",
+      "moduleResolution": "Node",
+
+      "baseUrl": "./",
+      "rootDir": "./",
+      "outDir": "./build",
+      "paths": {},
+
+      "lib": ["es6"],
+      "noImplicitAny": false,
+      "skipLibCheck": true,
+      "esModuleInterop": true,
+      "sourceMap": true,
+      "resolveJsonModule": true,
+      "strict": true,
+
+      "typeRoots": [
+        "./src/types",
+        "./node_modules/@types",
+      ],
+      
+      "allowImportingTsExtensions": true,
+      "noEmit": true,
+      
+    },
+  }

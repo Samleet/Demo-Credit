@@ -1,0 +1,9 @@
+<% if(typeof message != "undefined") { %>
+    <% status = balloon ?? 'error' %>
+
+    <div class="msgbar">
+        <div class="alert <%= status %>"><span>&triangle;</span> <%= message %></div>
+    </div>    
+
+<% } %>
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= 'Dashboard' %></title>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="shortcut icon" href="/images/logo.png" origin="no-cors" defer/>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <% include('partials/notif.html') %>
+
+            <div class="topbar">
+                <h2>
+                    Welcome Back, <%= auth().user().firstname %> 😉
+
+                    <span>
+                        <a href="/user/transactions" title="Transactions">
+                            <img src="/images/icons/bill.png" alt=""/>
+                        </a>
+                        <a href="/user/wallet/fund" title="Fund Account">
+                            <img src="/images/icons/money.png" alt=""/>
+                        </a>
+                        <a href="/user/notifications" title="Notifications">
+                            <img src="/images/icons/internet.png" alt=""/>
+                        </a>
+                        <a href="/user/logout" class="link">Sign Out &rightarrow;</a>
+                    </span>
+                </h2>
+            </div>
+
+            <div class="wallet">
+                <div class="card">
+                    <div class="card-inner body">
+                        <h2>Wallet Balance</h2>
+                        <span>&#8358 <%= wallet.balance.toLocaleString() %></span>
+                        
+                        <a href="/user/wallet/send"><button>Send Money</button></a>
+                        <a href="/user/wallet/withdraw"><button>Withdraw</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="logs">
+                <div class="title">Recent Transactions</div>
+                <table>
+                    <thead>
+                        <th>S/N</th>
+                        <th>Amount</th>
+                        <th>Beneficiary</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                        <th>Reference</th>
+                        <th>Date</th>
+                    </thead>
+                    <tbody>
+                    <% if(transactions.length == 0){ %>
+                        <tr>
+                            <td class="empty" colspan="7">
+                                <img src="/images/rockster.png"/>
+                                <span>You don't have any transactions at the moment.</span>
+                            </td>
+                        </tr>
+                    <% 
+                       } else {
+                        for(var i in transactions){
+                            transaction = transactions[i];
+                            user = getBeneficiary(transaction)
+                    %>
+                         <tr>
+                            <td><%= transaction.id %></td>
+                            <td><%- '&#8358;'+ transaction.amount.toLocaleString() %></td>
+                            <td><%= user.firstname +' '+ user.lastname %></td>
+                            <td><%= transaction.type %></td>
+                            <td><%= transaction.status %></td>
+                            <td><%= transaction.reference %></td>
+                            <td><%= transaction.created_at.toString().split('GMT')[0] %></td>
+                         </tr>
+                    <% 
+                        }
+                       }
+                    %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
