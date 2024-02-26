@@ -7,6 +7,10 @@
     "include": [
       "./*"
     ],
+    "tsc-alias": {
+      "resolveFullPaths": true,
+      "verbose": false
+    },
     "compilerOptions": {
       "target": "es6",
 
@@ -35,6 +39,6 @@
       
       // "allowImportingTsExtensions": true,
       // "noEmit": true,
-      
+   
     },
   }

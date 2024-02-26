@@ -5,7 +5,7 @@
   "main": "app.ts",
   "type": "module",
   "scripts": {
-    "build": "npx tsc",
+    "build": "npx tsc && tsc-alias",
     "dev": "nodemon",
     "knex": "knex --knexfile=src/configs/database/knex/config.ts",
     "migrate": "knex migrate:latest",
@@ -33,9 +33,10 @@
     "oracledb": "^6.3.0",
     "pg": "^8.11.3",
     "pg-query-stream": "^4.5.3",
+    "serverless-http": "^3.2.0",
     "sqlite3": "^5.1.7",
     "tedious": "^17.0.0",
-    "serverless-http": "^3.2.0",
+    "tsc-alias": "^1.8.8",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
