@@ -3,6 +3,13 @@ import auth from '../controllers/middlewares/auth.js';
 import authController from '../controllers/authController.js';
 import homeController from '../controllers/homeController.js';
 import walletController from '../controllers/walletController.js';
+
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 const router = Router();
 //Home Route
 router.get('/', (req, res) => {
@@ -11,7 +18,7 @@ router.get('/', (req, res) => {
     const data = {
         app, version
     };
-    res.send(process.env)
+    res.send(__dirname)
     // res.status(200).render('index', (data));
 });
 //Auth Routes
