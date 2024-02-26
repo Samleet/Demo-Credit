@@ -51,6 +51,7 @@ export default {
                 wallet,
                 transactions,
                 withdrawals,
+                getBeneficiary
             });
             return;
         }

@@ -1,12 +1,20 @@
 /**
- * Database Connection using KnexJS
+ * Database Connection using KnexJS ORM modules
  */
 
 import knex, { Knex } from 'knex';
+import dotenv  from "dotenv";
 import config from './config';
 
-const env = process.env.DB_ENV || 'development';
 
-const database: Knex = knex(config[env]);
+dotenv.config( )
+
+const env
+    : any = process.env.DB_ENV || 'development';
+/**
+console.log(env)
+*/
+
+const database: Knex = /** */ knex(config[env]);
 
 export default database;

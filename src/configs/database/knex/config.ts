@@ -1,10 +1,10 @@
+import dotenv  from "dotenv";
 import type { Knex } from "knex";
-import dotenv from "dotenv";
 
 /**
  * Database config for different environments
  */
-dotenv.config()
+dotenv.config();
 const env: any = process.env;
 
 const config: {[key: string]: Knex.Config} = {
@@ -22,7 +22,6 @@ const config: {[key: string]: Knex.Config} = {
       min: 2,
       max: 10
     },
-    debug: true,
     migrations: {
       tableName: 'migrations',
       extension: 'ts',
@@ -46,6 +45,7 @@ const config: {[key: string]: Knex.Config} = {
       min: 2,
       max: 10
     },
+    debug: false,
     migrations: {
       tableName: 'migrations',
       extension: 'ts',

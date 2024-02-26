@@ -19,7 +19,6 @@ const config = {
             min: 2,
             max: 10
         },
-        debug: true,
         migrations: {
             tableName: 'migrations',
             extension: 'ts',
@@ -43,6 +42,7 @@ const config = {
             min: 2,
             max: 10
         },
+        debug: false,
         migrations: {
             tableName: 'migrations',
             extension: 'ts',

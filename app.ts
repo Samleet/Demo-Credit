@@ -6,7 +6,7 @@ import ejs from 'ejs';
 import routes from './src/routes/index';
 
 
-const env = (dotenv.config( ));
+const env = (dotenv.config());
 const app: Express = express();
 const host = process.env.APP_URL;
 const port = process.env.PORT;
@@ -45,5 +45,6 @@ app.listen(port, () => {
   console.log(`Server is running at ${host}:${port}`);
   
 });
+
 
 export default app;

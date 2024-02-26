@@ -42,6 +42,7 @@ router
     .post('/user/wallet/:do', walletController.submit)
     .get('/user/transactions', walletController.trx)
     
+
 //404 Routes
     .get('*', /* fallback any */ homeController._404)
 
