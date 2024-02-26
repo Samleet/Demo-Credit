@@ -3,6 +3,7 @@ import session from "express-session";
 import dotenv from "dotenv";
 import ejs from 'ejs';
 import routes from './src/routes/index.js';
+
 const env = (dotenv.config());
 const app = express();
 const host = process.env.APP_URL;
