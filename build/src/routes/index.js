@@ -11,7 +11,8 @@ router.get('/', (req, res) => {
     const data = {
         app, version
     };
-    res.status(200).render('index', (data));
+    res.send(process.env)
+    // res.status(200).render('index', (data));
 });
 //Auth Routes
 router
