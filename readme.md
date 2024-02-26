@@ -19,7 +19,6 @@ in the project root directory run the "npm install" command to install all requi
 Setting KnexJS with Typescript isn't pretty straight forward due to the lack of native support out of the box. To get the next step working - we need to temporarily switch the project from ES6. To do this edit the "package.json" file and set the type to *CommonJS"
 
 ```json
-//package.json
 {
 	...
 	"type": "CommonJS",
@@ -28,7 +27,6 @@ Setting KnexJS with Typescript isn't pretty straight forward due to the lack of 
 ```
 Next we're going to comment  the "module" option from the "tsconfig.json" file so Typescript does not infer with KnexJS when running database migrations.
 ```json
-//tsconfig.json
 {
 	...
 	"compilerOptions": {
@@ -45,7 +43,6 @@ Next we're going to comment  the "module" option from the "tsconfig.json" file s
 ```
 
 Finally we will configure "dotenv" path to point to the ".env" file located in the project root by rewriting the "config.ts" file used by KnexJS to configure our database instance.
-
 ```typescript
 //project/src/configs/database/knex/config.ts
 
@@ -89,12 +86,15 @@ npm run dev
 ##### Test URL: https://samsonorode-lendsqr-be-test.onrender.com
 
 Email: lendsqrhr@gmail.com
+
 Password: 123456
 
 Email: smithjohn@gmail.com
+
 Password: 123456
 
 Email: maryparker@gmail.com
+
 Password: 123456
 
 ##  Thank You! 😉
