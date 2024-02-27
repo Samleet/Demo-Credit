@@ -51,11 +51,11 @@ Setting KnexJS with Typescript isn't pretty straight forward due to the lack of 
 
 {
 
-...
+	...
 
-"type": "CommonJS",
+	"type": "CommonJS",
 
-...
+	...
 
 }
 
@@ -67,24 +67,24 @@ Next we're going to comment the "module" option from the "tsconfig.json" file so
 
 {
 
-...
+	...
 
-"compilerOptions": {
+	"compilerOptions": {
 
-"target": "es6",
+		"target": "es6",
 
-//comment line when running Knex CLI
+		//comment line when running Knex CLI
 
-//using "CommonJS" as [package.type]
+		//using "CommonJS" as [package.type]
 
-//"module": "ESNext",
+		//"module": "ESNext",
 
-"moduleResolution": "Node",
+		"moduleResolution": "Node",
+	}
 
-...
+	...
 
 }
-
 
 ```
 
