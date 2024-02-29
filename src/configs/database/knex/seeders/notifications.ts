@@ -1,4 +1,4 @@
-import { Knex } from "knex";
+import { Knex } from "knex"
 import messages from "../../../../enums/message"
 import Notification from "../../../../models/notification"
 

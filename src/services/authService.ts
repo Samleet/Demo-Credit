@@ -1,10 +1,10 @@
-import knex, { QueryBuilder } from "knex";
-import bcrypt from "bcrypt";
+import knex, { QueryBuilder } from "knex"
+import bcrypt from "bcrypt"
 import User, { Users } from "../models/user"
 import { Wallets } from "../models/wallet"
 import { Notifications } from "../models/notification"
 import auth from "../helpers/auth"
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid"
 import messages from "../enums/message"
 
 

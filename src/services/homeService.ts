@@ -1,4 +1,4 @@
-import auth from "../helpers/auth";
+import auth from "../helpers/auth"
 import { Notifications } from "../models/notification"
 import { Transactions } from "../models/transaction"
 

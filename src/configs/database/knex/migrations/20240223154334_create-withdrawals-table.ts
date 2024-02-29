@@ -1,5 +1,5 @@
-import { table } from "console";
-import type { Knex } from "knex";
+import { table } from "console"
+import type { Knex } from "knex"
 import status from '../../../../enums/status'
 
 

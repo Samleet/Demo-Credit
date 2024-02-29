@@ -1,5 +1,5 @@
-import { Knex } from "knex";
-import { v4 as uuidv4 } from 'uuid';
+import { Knex } from "knex"
+import { v4 as uuidv4 } from "uuid"
 import Wallet from "../../../../models/wallet"
 
 

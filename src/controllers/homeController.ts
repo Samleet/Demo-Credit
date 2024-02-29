@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-import auth from "../helpers/auth";
+import { Request, Response } from "express"
+import auth from "../helpers/auth"
 import homeService from "../services/homeService"
 import walletService from "../services/walletService"
 import { getBeneficiary } from "../helpers/global"

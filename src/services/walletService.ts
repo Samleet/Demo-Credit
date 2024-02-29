@@ -1,10 +1,10 @@
-import auth from "../helpers/auth";
+import auth from "../helpers/auth"
 import { Wallets } from "../models/wallet"
 import { Transactions } from "../models/transaction"
 import status from "../enums/status"
 import payment from "../enums/payment"
 import { Withdrawals } from "../models/withdrawal"
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid"
 import { Notifications } from "../models/notification"
 import messages from "../enums/message"
 import { Users } from "../models/user"

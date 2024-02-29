@@ -14,9 +14,9 @@
  * @description: get authenticated user
 */
 
-import { Request } from "express";
+import { Request } from "express"
 import User, { Users } from "../models/user"
-import bcrypt from "bcrypt";
+import bcrypt from "bcrypt"
 
 let user: {}; //local strategy to get user
 

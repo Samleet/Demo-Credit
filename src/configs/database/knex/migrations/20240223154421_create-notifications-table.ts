@@ -1,5 +1,5 @@
-import { table } from "console";
-import type { Knex } from "knex";
+import { table } from "console"
+import type { Knex } from "knex"
 
 export async function up(knex: Knex): Promise<void> {
     knex.schema.createTable('notifications', (table: Knex.TableBuilder) => {

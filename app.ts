@@ -1,7 +1,7 @@
-import express, { Express } from "express";
+import express, { Express } from "express"
 import session from "express-session"
-import dotenv from "dotenv";
-import database from "./src/configs/database/knex/index";
+import dotenv from "dotenv"
+import database from "./src/configs/database/knex/index"
 import ejs from 'ejs';
 import routes from './src/routes/index';
 

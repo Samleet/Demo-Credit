@@ -1,5 +1,5 @@
-import { Request, Response, NextFunction } from "express";
-import auth from "../../helpers/auth";
+import { Request, Response, NextFunction } from "express"
+import auth from "../../helpers/auth"
 
 /**
  * Auth middleware for handling authorized routes & calls

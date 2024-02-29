@@ -1,8 +1,8 @@
-import { Router, Request, Response } from "express";
-import auth from '../controllers/middlewares/auth'
-import authController from '../controllers/authController'
-import homeController from '../controllers/homeController'
-import walletController from '../controllers/walletController'
+import { Router, Request, Response } from "express"
+import auth from "../controllers/middlewares/auth"
+import authController from "../controllers/authController"
+import homeController from "../controllers/homeController"
+import walletController from "../controllers/walletController"
 
 const router = Router();
 

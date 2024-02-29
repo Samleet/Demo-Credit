@@ -1,7 +1,7 @@
-import { table } from "console";
-import type { Knex } from "knex";
-import payment from '../../../../enums/payment'
-import status from '../../../../enums/status'
+import { table } from "console"
+import type { Knex } from "knex"
+import payment from "../../../../enums/payment"
+import status from "../../../../enums/status"
 
 export async function up(knex: Knex): Promise<void> {
     knex.schema.createTable('transactions', (table: Knex.TableBuilder) => {

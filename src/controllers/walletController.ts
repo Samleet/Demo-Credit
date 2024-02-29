@@ -1,5 +1,4 @@
-import { Request, Response } from "express";
-import auth from "../helpers/auth";
+import { Request, Response } from "express"
 import walletService from "../services/walletService"
 import { getBeneficiary } from "../helpers/global"
 
@@ -74,7 +73,7 @@ export default {
 
         }
 
-        res.redirect(req.originalUrl);
+        res.redirect('/user/dashboard');
 
     }
 

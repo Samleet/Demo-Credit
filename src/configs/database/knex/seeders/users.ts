@@ -1,5 +1,5 @@
-import { Knex } from "knex";
-import bcrypt from "bcrypt";
+import { Knex } from "knex"
+import bcrypt from "bcrypt"
 import User from "../../../../models/User"
 
 

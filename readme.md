@@ -6,7 +6,7 @@ This is a mobile lending app that requires wallet functionality. This is needed 
 
   
 
-Disclaimer: This is not a real project but an assessment for the application of a Backend Developer for [LendsQR](https://lendsqr.com).
+Disclaimer: This is not a real project but an assessment for the application of a Backend Developer at [LendsQR](https://lendsqr.com).
 
 ## Technologies
 
@@ -27,7 +27,7 @@ Disclaimer: This is not a real project but an assessment for the application of 
 
   
 
-in the project root directory run the "npm install" command to install all required dependencies to power the application services.
+In the project root directory run the "npm install" command to install all required dependencies to power the application service.
 
   
 

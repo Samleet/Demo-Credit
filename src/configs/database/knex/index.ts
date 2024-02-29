@@ -2,9 +2,9 @@
  * Database Connection using KnexJS ORM modules
  */
 
-import knex, { Knex } from 'knex';
-import dotenv  from "dotenv";
-import config from './config';
+import knex, { Knex } from "knex"
+import dotenv  from "dotenv"
+import config from "./config"
 
 
 dotenv.config( )
